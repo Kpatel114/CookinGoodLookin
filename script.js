@@ -1,10 +1,11 @@
 // 5 JS skills
 
 /* 
-2. Snackbar
-3. DOM manipulation - Alert
-4. DOM manipulation - real time clock
-5. DOM manipulation - color changing
+1. Snackbar
+2. DOM manipulation - Alert
+3. DOM manipulation - real time clock
+4. DOM manipulation - big cat
+5. DOM Manipulation - Scroll
 */
 'use strict';
 
