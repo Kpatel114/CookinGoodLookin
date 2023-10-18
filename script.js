@@ -11,9 +11,9 @@
 // snackbar
 function mySnack() {
     console.log('the snack is working')
-    var x = document.getElementById("snackbar");
-    x.className = "show";
-    setTimeout(function(){ x.className = x.className.replace("show", ""); }, 5000);
+    var snack = document.getElementById("snackbar");
+    snack.className = "show";
+    setTimeout(function(){ snack.className = snack.className.replace("show", ""); }, 5000);
   }
 // end of snack bar
 
@@ -24,14 +24,14 @@ function alertFunction() {
 }
 
 // real time clock
-var span = document.getElementById('span');
+var div = document.getElementById('clock');
 
 function time() {
   var d = new Date();
   var s = d.getSeconds();
   var m = d.getMinutes();
   var h = d.getHours();
-  span.textContent = 
+  div.textContent = 
     ("0" + h).substr(-2) + ":" + ("0" + m).substr(-2) + ":" + ("0" + s).substr(-2);
 }
 
@@ -49,8 +49,8 @@ function bigImg(x) {
   }
 
 //scrollin
-document.getElementById("myDIV").addEventListener("wheel", myFunction);
+document.getElementById("scroll").addEventListener("wheel", increaseFont);
 
-function myFunction() {
+function increaseFont() {
   this.style.fontSize = "100px";
 }
