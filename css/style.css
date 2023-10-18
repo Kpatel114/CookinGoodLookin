@@ -1,0 +1,391 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: 'Noto Sans', sans-serif;
+}
+body {
+    margin: 20rem 0rem;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Noto Sans', sans-serif;
+    position: relative;
+}
+
+/*Images - responsive*/
+img{
+    max-width: 100%;
+    display: block;
+    object-fit: cover;
+}
+
+.welcome-image{
+    /*1. CSS3 - A shadow overlay over an image with welcome sign on top */
+    margin: 10rem;
+    width: 80%;
+    height: 600px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-image: url(/css/images/kitchen-shadow.jpg);
+    background-position: center ;
+    background-size: cover;
+    border-radius: 8px;
+    /* 2. CSS3 Customized Cursor to welcome visitors!*/
+    cursor: url("https://s3-us-west-2.amazonaws.com/s.cdpn.io/9632/happy.png"), auto;
+}
+.welcome-image-text{
+    background: rgba(0, 0, 0, 0.5);
+    height: 600px;
+    width: 100%;
+    color: rgb(232, 232, 232);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.welcome{
+    /*3. CSS3 Custom Welcome Text  */
+    font-size: 32px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    
+
+}
+/* Nav Bar */
+nav {
+    position: fixed;
+    top: 0px;
+    width: 100%;
+    height:160px;
+    background-color: black;
+    color: silver;
+    opacity: .9;
+    z-index: 2;
+
+
+}
+
+.nav-box {
+    margin: 0px 175px;
+}
+
+#icons {
+    font-size: 2remem;
+}
+
+nav ul {
+    margin-top: 50px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+}
+
+nav ul li {
+    font-size: 2rem;
+    line-height: center;
+    list-style: none;
+    letter-spacing: 0.05em;
+    cursor: pointer;
+    transition: 0.4s ease-in-out;
+}
+
+nav ul li:hover {
+    /* 4. CSS - Nav Bar Items Glow when hovered on */
+    color: white; 
+    /* -moz-filter: blur(4px);
+    -webkit-filter: blur(4px);
+    filter: blur(4px); */
+    transition: all 0.4s ease-in;
+
+}
+
+li:first-of-type {
+    font-size: 1.1em;
+}
+
+/* END OF NAV */
+.sidenav {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+
+    position: fixed;
+    z-index: 1;
+    top: 10rem;
+    left: 0rem;
+    background: #dfdfdf;
+    overflow-x: hidden;
+    padding: 8px 8px;
+
+  }
+  .sidenav ul {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    list-style-type: none;
+
+  }
+.sidenav ul li{
+    cursor: pointer;
+    transition: 0.4s ease-in-out; 
+}
+.sidenav ul li:hover {
+    /* 4. CSS - Nav Bar Items Glow when hovered on */
+    color: white; 
+    /* -moz-filter: blur(4px);
+    -webkit-filter: blur(4px);
+    filter: blur(4px); */
+    transition: all 0.4s ease-in;
+
+}
+
+/*Snack Bar*/
+#snackbar {
+    visibility: hidden; /* Hidden by default. Visible on click */
+    min-width: 250px; /* Set a default minimum width */
+    margin-left: -125px; /* Divide value of min-width by 2 */
+    background-color: #333; /* Black background color */
+    color: #fff; /* White text color */
+    text-align: center; /* Centered text */
+    border-radius: 2px; /* Rounded borders */
+    padding: 16px; /* Padding */
+    position: fixed; /* Sit on top of the screen */
+    z-index: 3; /* Add a z-index if needed */
+    left: 50%; /* Center the snackbar */
+    bottom: 30px; /* 30px from the bottom */
+  }
+  
+  /* Show the snackbar when clicking on a button (class added with JavaScript) */
+  #snackbar.show {
+    visibility: visible; /* Show the snackbar */
+    /* Add animation: Take 0.5 seconds to fade in and out the snackbar.
+    However, delay the fade out process for 2.5 seconds */
+    -webkit-animation: fadein 0.5s, fadeout 0.5s 2.5s;
+    animation: fadein 0.5s, fadeout 0.5s 2.5s;
+  }
+  
+  /* Animations to fade the snackbar in and out */
+  @-webkit-keyframes fadein {
+    from {bottom: 0; opacity: 0;}
+    to {bottom: 300px; opacity: 1;}
+  }
+  
+  @keyframes fadein {
+    from {bottom: 0; opacity: 0;}
+    to {bottom: 300px; opacity: 1;}
+  }
+  
+  @-webkit-keyframes fadeout {
+    from {bottom: 300px; opacity: 1;}
+    to {bottom: 0; opacity: 0;}
+  }
+  
+  @keyframes fadeout {
+    from {bottom: 300px; opacity: 1;}
+    to {bottom: 0; opacity: 0;}
+  }
+/* Snack Bar*/
+/* 5. CSS Custom Built glass container with shadow effect*/
+.recent-blog-post{
+    width: 500px;
+    height: 50vh;
+}
+.container{
+    position: relative;
+    width: 500px;
+    height: 700px;
+    margin: 200px auto;
+    padding: 0;
+}
+.glass{
+    background: linear-gradient(135deg, rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0));
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    border-radius: 20px;
+    border: 1px solid rgba(255, 255, 255, 0.18);
+    box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
+    opacity: 0.8;
+}
+.blog-image{
+    margin: 0;
+    margin-left: -13px;
+    margin-top: -1px;
+    padding: 0;
+    border-radius: 20px;
+    width: 50%;
+    height: 400px;
+    object-position: 50% 50%;
+    object-fit: cover;
+}
+.blog-intro{
+    position: absolute;
+    top: 0;
+    right: 0;
+    margin-top: 15px;
+    width: 50%;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+}
+.blog-intro h3{
+    font-weight: bold;
+}
+.blog-recipe{
+    margin-top: 50px;
+}
+.blog-recipe h3 {
+    font-weight: bold;
+}
+.cat-container{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.cat{
+    margin: 0;
+    padding: 0;
+    border-radius: 20px;
+    width: 10%;
+    height: 150px;
+    object-position: 50% 50%;
+    object-fit: cover;
+}
+/* FOOTER */
+footer {
+    position: relative;
+    bottom: 0;
+    width: 100%;
+    height: 2.5rem;
+}
+
+.footer-container {
+    background-color: black;
+    color: silver;
+    opacity: .9;
+    width: auto;
+    padding: 2%;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    position: relative;
+}
+
+.footerinfo {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 30%;
+    font: 1em;
+}
+
+.footershows {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 25%;
+    font: 1em
+}
+
+.social {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    width: 25%;
+    font: 0.6em;
+
+}
+
+.foothead {
+    font-size: 2em;
+}
+
+/* END OF FOOTER */
+
+/* Media Queries */
+@media screen and (max-width: 740px) {
+
+    .nav-menu1 {
+        display: none;
+    }
+
+    .nav-menu2 {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    #icons {
+        font-size: 1.2em;
+    }
+
+    nav ul li {
+        font-size: 0.78em;
+        line-height: 2.8em;
+        list-style: none;
+        letter-spacing: 0.055em;
+        cursor: pointer;
+        transition: 0.4s ease-in-out;
+    }
+
+    nav ul li:hover {
+        color: white;
+        transition: all 0.4s ease-in;
+    }
+
+    li:first-of-type {
+        font-size: 1.1em;
+    }
+}
+
+@media screen and (min-width:741px) {
+    .nav-menu1 {
+        display: flex;
+    }
+
+    .nav-menu2 {
+        display: none;
+    }
+
+    .nav-box {
+        max-width: 100%;
+        margin: 0% 10%;
+    }
+
+    #icons {
+        font-size: 1.2em;
+    }
+
+    .nav-menu1 {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        align-content: center;
+    }
+
+    nav ul li {
+        font-size: 0.78em;
+        line-height: 2.8em;
+        list-style: none;
+        letter-spacing: 0.055em;
+        cursor: pointer;
+        transition: 0.4s ease-in-out;
+    }
+
+    nav ul li:hover {
+        color: white;
+        transition: all 0.4s ease-in;
+    }
+
+    li:first-of-type {
+        font-size: 1.1em;
+    }
+
+}
