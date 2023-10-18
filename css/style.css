@@ -30,6 +30,7 @@ img{
     background-position: center ;
     background-size: cover;
     border-radius: 8px;
+
     /* 2. CSS3 Customized Cursor to welcome visitors!*/
     cursor: url("https://s3-us-west-2.amazonaws.com/s.cdpn.io/9632/happy.png"), auto;
 }
@@ -44,14 +45,13 @@ img{
     align-items: center;
 }
 .welcome{
+
     /*3. CSS3 Custom Welcome Text  */
     font-size: 32px;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    
-
 }
 /* Nav Bar */
 nav {
@@ -93,7 +93,7 @@ nav ul li {
 }
 
 nav ul li:hover {
-    /* 4. CSS - Nav Bar Items Glow when hovered on */
+    /* 3. CSS - Nav Bar Items Glow when hovered on */
     color: white; 
     /* -moz-filter: blur(4px);
     -webkit-filter: blur(4px);
@@ -136,7 +136,6 @@ li:first-of-type {
     transition: 0.4s ease-in-out; 
 }
 .sidenav ul li:hover {
-    /* 4. CSS - Nav Bar Items Glow when hovered on */
     color: white; 
     /* -moz-filter: blur(4px);
     -webkit-filter: blur(4px);
@@ -191,7 +190,8 @@ li:first-of-type {
     to {bottom: 0; opacity: 0;}
   }
 /* Snack Bar*/
-/* 5. CSS Custom Built glass container with shadow effect*/
+
+/* 4. CSS Custom Built glass container with shadow effect*/
 .recent-blog-post{
     width: 500px;
     height: 50vh;
@@ -308,7 +308,7 @@ footer {
 }
 
 /* END OF FOOTER */
-
+/* 5. CSS - Use of Media Queries (Responsive Nav Bar)*/
 /* Media Queries */
 @media screen and (max-width: 740px) {
 
